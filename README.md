@@ -13,6 +13,34 @@ You can use this with the following extensions or plugins.
 - [VSCodeVim](https://github.com/VSCodeVim/Vim)
 - [vim-im-select-obsidian](https://github.com/ALONELUR/vim-im-select-obsidian)
 
+# Build
+
+Install a Windows C++ compiler such as MSYS2 MinGW-w64, then run:
+
+```powershell
+.\build.ps1
+```
+
+The executable is created at `build\Release\conversion-select.exe`.
+
+For a debug build:
+
+```powershell
+.\build.ps1 -Configuration Debug
+```
+
+To clean generated files:
+
+```powershell
+.\build.ps1 -Clean
+```
+
+You can also use the command prompt wrapper:
+
+```bat
+build.bat
+```
+
 # Troubleshooting
 
 Flags used in conversion-select.cpp for WM_IME_CONTROL is not documented in [official documentation](https://learn.microsoft.com/en-us/windows/win32/intl/wm-ime-control), and seems like this is IME-dependent.
